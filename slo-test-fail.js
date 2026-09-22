@@ -6,7 +6,7 @@ export const options = {
   duration: '1m',
   thresholds: {
     'http_req_duration{name:cart}': ['p(95)<15'],
-    'http_req_duration{name:report}': ['p(95)<100'], // Зориуд FAIL болгох босго (API нь 200-400мс унтдаг тул FAIL болно)
+    'http_req_duration{name:report}': ['p(95)<50'], // API нь 200-400ms тул заавал FAIL болно
     'http_req_failed{name:pay}':    ['rate<0.08'],
     'checks':                       ['rate>0.90'],
   },
