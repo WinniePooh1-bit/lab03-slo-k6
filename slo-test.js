@@ -5,10 +5,10 @@ export const options = {
   vus: 20,
   duration: '1m',
   thresholds: {
-    'http_req_duration{name:cart}': ['p(95)<15'],    // Custom Performance SLO (Localhost хурдыг тусгасан: <15ms)
-    'http_req_duration{name:report}': ['p(95)<400'], // Custom Report SLO (<400ms)
-    'http_req_failed{name:pay}':    ['rate<0.08'],   // Reliability SLO (<8% алдаа)
-    'checks':                       ['rate>0.90'],   // Availability SLO (≥90% амжилт)
+    'http_req_duration{name:cart}': ['p(95)<15'],    // Performance SLO
+    'http_req_duration{name:report}': ['p(95)<400'], // Report SLO
+    'http_req_failed{name:pay}':    ['rate<0.08'],   // Reliability SLO
+    'checks':                       ['rate>0.90'],   // Availability SLO
   },
 };
 
